@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    /*overflow-y: hidden;*/
+    ;
+}
+
+.clock {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 10px solid #444;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /*background: url("../img/twitter.png")  no-repeat fixed top;*/
+    background-size: 200px 200px;
+    z-index: 999;
+}
+
+.clock::after {
+    content: "";
+    /*position: relative;*/
+    height: 190px;
+    width: 190px;
+    /*background: white;*/
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("../img/twitter.png") no-repeat;
+    background-size: 60px 60px;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.clock .top {
+    position: absolute;
+    width: 3px;
+    height: 8px;
+    background: #666;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.clock .right {
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background: #262626;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+}
+
+.clock .bottom {
+    position: absolute;
+    width: 3px;
+    height: 8px;
+    background: #262626;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.clock .left {
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background: #262626;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+}
+
+.clock .center {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #262626;
+    border-radius: 100%;
+}
+
+.clock .shadow {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    transform: rotate(135deg);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, .1));
+}
+
+.clock .hour {
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /*animation: time 60s infinite linear;*/
+}
+
+.clock .hour:before {
+    position: absolute;
+    content: "";
+    background: #262626;
+    height: 40px;
+    width: 3px;
+    top: 50px;
+}
+
+.clock .minute {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /*animation: time 30s infinite linear;*/
+}
+
+.clock .minute:before {
+    position: absolute;
+    content: "";
+    background: #262626;
+    height: 60px;
+    width: 1px;
+    top: 30px;
+}
+
+.clock .second {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.clock .second:before {
+    position: absolute;
+    content: "";
+    /*background: #fd1111;*/
+    background: #2aa3ef;
+    height: 65px;
+    width: 1px;
+    top: 25px;
+}
+
+.time-label {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    /*color:#fff;*/
+    margin: auto;
+}
+
+.rightcir {
+    position: absolute;
+    width: 140px;
+    height: 280px;
+    left: 90px;
+    overflow: hidden;
+    top: -50px;
+}
+
+.rightcircle {
+    width: 240px;
+    height: 240px;
+    border: 20px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 20px solid green;
+    border-right: 20px solid green;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /* 旋转45度 */
+}
+/*------dot--------*/
+#tweet_list span{
+    color: #fff;
+    /*position: absolute;*/
+    display: block;
+   /* max-height:5vh;
+    font-size: 0.1em;
+    flex-wrap:wrap;
+    /*display: list-item;*/
+    /*animation: time 3s ease-out;*/
+    z-index: 2;
+    word-wrap: break-word;
+    width: 6px;
+    line-height: 0.3em;
+    overflow-y: hidden;
+}
+
+
+
+.st7{
+background-color: #FFA497
+}
+.st6{
+    background-color: #FFD4A1
+}
+
+.st5{
+background-color: #FFEEA1
+}
+
+.st4{
+background-color: #C5DBA9
+}
+
+.st3{
+background-color: #A2C6C5
+}
+
+.st2{
+background-color: #88D0D8}
+
+.st1{
+background-color: #98A8F5
+}
+
+.space{
+   /* width: 1px;
+    border-style:none;
+    height: 0px;*/
+fill:none;
+}
+.tweet-container{
+    animation: show 1s ;
+    animation-direction:normal;
+    margin:3px;
+     color: #fff;
+    position: relative;
+    display: flex;
+    /*width: 180px;*/
+    width:62px;
+    height: 62px;
+    top: 1;
+    align-items:flex-end ;
+    align-content: flex-end;
+    overflow-wrap:normal;
+    flex-wrap:wrap; 
+    opacity: 1;
+    overflow-y: hidden;
+    /*border:solid 0.5px #aaa;*/
+
+
+}
+.dot{
+  width: 3px;
+  height: 3px;
+  /*border-radius: 3px;*/
+  background-color: #6dff56; 
+   margin: 3px 1px; 
+  box-shadow: 0 0 5px #fff;
+}
+.dot-dark{
+  width: 3px;
+  height: 3px;
+  /*border-radius: 3px;*/
+  background-color: #333; 
+  margin: 3px 1px; 
+    /*margin-top: 1*/
+}
+#tweet_list {
+    display: flex;
+     width: 100vw;
+     align-items: flex-start;
+     justify-content: flex-start;
+     flex-wrap:wrap;  
+} 
+
+@keyframes time {
+    0% {
+        opacity: 0.3;
+        
+    }
+    25% {
+        opacity: 0.8;
+        transform: translateY(-3px);
+        /*transform: scale(1)*/
+    }
+    50% {
+        opacity: 0.8;
+    }
+    75% {}
+    100% {
+        opacity: 0;
+         transform: translateY(3px);
+    }
+}
+@keyframes show {
+    from{
+        opacity: 0
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*=========svg========*/
+svg{
+    height: 100vh;
+    width: 100vw;
+   /* width: 180px;
+    height: 180px;*/
+}
+.showdot{
+     animation: cchange 1s ease-out;
+fill: #666;
+}
+@keyframes cchange{
+    0%{
+        fill: #FFA497
+    }
+    30%{
+        fill: #FFD4A1
+    }
+    40%{
+        fill: #FFEEA1
+    }
+    50%{
+        fill:  #C5DBA9
+    }
+    60%{
+        fill: #A2C6C5
+    }
+    70%{
+        fill: #88D0D8
+    }
+    80%{
+        fill: #98A8F5
+    }
+    100%{
+        fill:#666;
+    }
+}
+.tooltip {
+    background: #eee;
+    box-shadow: 0 0 5px #999999;
+    color: #333;
+    font-size: 12px;
+    left: 130px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 95px;
+    z-index: 10;
+    display: block;
+    opacity: 0;
+}
+a {
+  text-decoration: none;
+  font-size: 200;
+  /*font-family: arial, sans-serif;*/
+  font-family: 'Noto Serif', serif;
+  color:#444;
+  margin: 3px;
+  /*padding: 3px;*/
+  /*padding-bottom: 5px;*/
+  /*border-bottom: 1px solid #033;*/
+  /*font-weight: 700;*/
+      /*border-bottom: solid 2px #bfd9d9;*/
+}
+#drawing{
+    position: fixed;
+    bottom:30%;
+    width: 100vw;
+
+    text-align: center;
+    /*left:calc( 50% - 66px);*/
+    /*padding:7px 15px;*/
+     font-family: 'Noto Serif', serif;
+    color: #333;
+    font-size: 8em;
+    z-index: 999;
+}
+.b-btn{
+    position: fixed;
+    bottom: 15px;
+    width: 100px;
+    text-align: center;
+    left:calc( 50% - 66px);
+    padding:7px 15px;
+    border:solid 1px #333;
+    border-radius: 5px;
+    color: #333;
+    z-index: 999;
+}
+.b-btn:hover{
+    position: fixed;
+    bottom: 15px;
+    width: 100px;
+    text-align: center;
+    left:calc( 50% - 66px);
+    padding:7px 15px;
+    border:solid 1px #fff;
+    border-radius: 5px;
+    color: #fff;
+}

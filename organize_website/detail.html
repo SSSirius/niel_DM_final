@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Details of Ceramics</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/angular.min.js" type="text/javascript"></script>
+  <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./js/app.js" type="text/javascript"></script>
+  <script src="./js/services.js"></script>
+  <!-- <script src="./js/rellax.js"></script> -->
+  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/scroll.js"></script>
+
+</head>
+
+<body ng-controller="detail">
+
+  
+
+  <div class="row">
+    <div class="col-md-5">
+      <div class=" col-md-2 animated slideInLeft detail-back" onClick="javascript :history.back(-1);""> &#9664;</div>
+<div class="col-md-offset-2 col-md-10 detail-title animated slideInLeft">  {{detail.name}}</div>
+<div class="col-md-offset-2 col-md-10 detail-subtitle animated slideInLeft"> {{detail.period}} </div>
+<div ng-show="{{detail.kiln}}" class="col-md-offset-2 col-md-10 detail-subtitle animated slideInLeft"> From: {{detail.kiln}}</div>
+
+    
+
+    </div>
+
+
+
+    <div class="col-md-7 detail-img animated slideInText" >
+      <img src="{{detail.url}}" alt="">
+    </div>
+    <div class=" detail-text animated slideInLeft"> {{detail.intro}} </div>
+    
+    </div>
+    
+  
+
+</body>
+
+</html>

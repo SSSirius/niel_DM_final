@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Period</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" href="./css/animate.css">
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/animate.css">
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/angular.min.js" type="text/javascript"></script>
+	<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="./js/app.js" type="text/javascript"></script>
+	<script src="./js/services.js"></script>
+	<!-- <script src="./js/rellax.js"></script> -->
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/scroll.js"></script>
+
+</head>
+
+<body ng-controller="selection">
+
+	<div id="up" class="period-time-display-u">
+		<a href="detail.html#{{meal.index}}" ng-repeat="meal in meals" ng-if="$even">
+			<img class="img-circle period-img animated slideInRight" alt="" src="{{meal.url}}">
+		</a>
+	</div>
+	<div id="bar" class="period-timeline" id="dragdown">
+		<div id="timebar" class="period-timeline-btn">
+			
+		</div>
+		<div id="year" class="year-bar"><span class=" period-time time1 ">8000 BC</span>
+		<span class=" period-time time2">2000 BC</span>
+		<!-- <span class=" period-time time3">206 BC</span> -->
+		<span class=" period-time time4">220</span>
+		<span class=" period-time time5">618</span>
+		<span class=" period-time time6">907</span>
+		<span class=" period-time time7">1279</span>
+		<span class=" period-time time8">1368</span>
+		<span class=" period-time time9">1644</span>
+		<span class=" period-time time10">1911</span></div>
+		<div id="dynasty" >Neolithic Age</div>
+	</div>
+
+	<div id="down" class="period-time-display-d">
+		<a href="detail.html#{{meal.index}}" ng-repeat="meal in meals" ng-if="$odd">
+			<img class="img-circle period-img animated slideInRight" alt="" src="{{meal.url}}">
+		</a>
+	</div>
+
+
+	<div class="foot-nav">
+		<a href="home.html" class="nav-btn  ">
+			<img class="nav-img " src="./img/logoba.png" alt="">
+		</a>
+		<a href="period.html" class="nav-btn ft-b btn-active">Period</a>
+		<a href="glaze.html" class="nav-btn ft-b">Glaze</a>
+		<a href="scenario.html" class="nav-btn ft-b">Scenario</a>
+
+	</div>
+
+</body>
+
+</html>

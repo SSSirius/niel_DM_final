@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scenario</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/angular.min.js" type="text/javascript"></script>
+  <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./js/app.js" type="text/javascript"></script>
+  <script src="./js/services.js"></script>
+  <!-- <script src="./js/rellax.js"></script> -->
+  <script src="./js/jquery-ui.min.js"></script>
+  <script src="./js/scroll.js"></script>
+
+</head>
+
+<body ng-controller="scenario">
+
+  <!--   <img ng-repeat="meal in meals "  ng-if="$even" class="img-circle period-img" alt=""  src="{{meal.url}}">
+  </div>
+  <div id="bar" class="period-timeline" id="dragdown">
+    <div id="timebar" class="period-timeline-btn" ></div>
+  </div> -->
+
+  <div class="row animated  fadeInUp">
+    <div id="kind1" class="col-md-offset-1 col-md-2 " ng-click="display(1)">
+      <div class="sc-kind1 sc-label">
+        <div class="sc-kind-title ">Container for Liquid</div>
+      </div>
+    </div>
+    <div id="kind2" class=" col-md-2 " ng-click="display(2)">
+      <div class="sc-kind2 sc-label">
+        <div class="sc-kind-title">
+          Daily Supplies</div>
+      </div>
+    </div>
+    <div id="kind3" class=" col-md-2 " ng-click="display(3)">
+      <div class="sc-kind3 sc-label">
+        <div class="sc-kind-title">Decoration</div>
+      </div>
+    </div>
+    <div id="kind4" class="col-md-2 " ng-click="display(4)">
+      <div class="sc-kind4 sc-label">
+        <div class="sc-kind-title">Religion</div>
+      </div>
+    </div>
+    <div id="kind5" class=" col-md-2 " ng-click="display(5)">
+      <div class="sc-kind5 sc-label">
+        <div class="sc-kind-title">Funerary Objects</div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <!--           kind1   -->
+  <div id="display" class="row col-md-offset-1 col-md-10 display " ng-show="isShow">
+
+    
+    <div class=" col-md-12  sc-dis-title-con">
+      <div class="sc-dis-title animated fadeInUp" ng-bind="title"></div>
+
+    </div>
+    <hr class="sc-dis-line  col-md-12 ">
+    <div class="sc-img-con " ng-repeat="item in items">
+      <a href="detail.html#{{item.index}}"><img class="sc-img img-circle animated fadeInUp" alt="" src="{{item.url}}"></a>
+    </div>
+    <div class="sc-btn-line col-md-12 animated fadeInUp" ng-click="display(5)"> 
+      <div class="sc-btn " >&#9662;</div> </div>
+
+  </div>
+
+  <!--           kind2   
+  <div id="display2" class="row col-md-offset-1 col-md-10 display" ng-show="checkkind(2)">
+    <div class=" col-md-12  sc-dis-title-con">
+      <div class="sc-dis-title animated fadeInUp">Daily Supplies</div>
+
+    </div>
+    <hr class="sc-dis-line  col-md-12 ">
+    <div class="sc-img-con " ng-repeat="item in items | filter: {kind : 2}">
+      <img class="sc-img img-circle animated fadeInUp" alt="" src="{{item.url}}">
+    </div>
+  </div>
+          kind3   -->
+ <!--  <div id="display3" class="row col-md-offset-1 col-md-10 display" ng-show="checkkind(3)">
+    <div class=" col-md-12  sc-dis-title-con">
+      <div class="sc-dis-title animated fadeInUp">Decoration</div>
+
+    </div>
+    <hr class="sc-dis-line  col-md-12 ">
+    <div class="sc-img-con " ng-repeat="item in items | filter: {kind : 3}">
+      <img class="sc-img img-circle animated fadeInUp" alt="" src="{{item.url}}">
+    </div>
+  </div>
+           kind4   -->
+<!--   <div id="display4" class="row col-md-offset-1 col-md-10 display" ng-show="checkkind(4)">
+    <div class=" col-md-12  sc-dis-title-con">
+      <div class="sc-dis-title animated fadeInUp">Religion</div>
+
+    </div>
+    <hr class="sc-dis-line  col-md-12 ">
+    <div class="sc-img-con " ng-repeat="item in items | filter: {kind : 4}">
+      <img class="sc-img img-circle animated fadeInUp" alt="" src="{{item.url}}">
+    </div>
+  </div> -->
+            
+  <!-- <div id="display5" class="row col-md-offset-1 col-md-10 display" ng-show="checkkind(5)">
+    <div class=" col-md-12  sc-dis-title-con">
+      <div class="sc-dis-title animated fadeInUp">Funerary Objects</div>
+
+    </div>
+    <hr class="sc-dis-line  col-md-12 ">
+    <div class="sc-img-con " ng-repeat="item in items | filter: {kind : 5}">
+      <img class="sc-img img-circle animated fadeInUp" alt="" src="{{item.url}}">
+    </div>
+  </div>  -->
+  <!-- <div class="glaze-dot"></div> -->
+
+<div class="foot-nav">
+  <a href="home.html" class="nav-btn"><img class="nav-img" src="./img/logoba.png" alt=""></a>
+  <a href="period.html" class="nav-btn ft-b">Period</a>
+  <a href="glaze.html" class="nav-btn ft-b">Glaze</a>
+<a href="scenario.html" class="nav-btn ft-b btn-active">Scenario</a>
+
+</div>
+
+
+
+</body>
+
+</html>
