@@ -10,9 +10,9 @@ click to change state
 Colors of Emotion Reference ->[Plutchik's Wheel of Emotions](https://en.wikipedia.org/wiki/Contrasting_and_categorization_of_emotions#Plutchik.27s_wheel_of_emotions)
 
 
-Descriptions of each state is on the conceptual website.
+Descriptions of scenarios and experience are on the conceptual website.
 
-**conceptual website:**
+**Interface of the conceptual website:**
 
  ![emoflix1](emoflix1.png)
  ![emoflix2](emoflix2.png)
