@@ -416,7 +416,8 @@ font-weight: 300;
     align-content: center;
     display: flex;
     height: 100vh;
-    overflow-y: hidden;
+    overflow: hidden;
+    
 }
 .home-bg{
     position: absolute;
