@@ -395,7 +395,7 @@ opacity: 0.4;
     height: 60vh;
     padding:8.33vw;
     background-color: rgba(255,255,255,0.4);
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     letter-spacing: 1px;
 }
 .detail-back{
