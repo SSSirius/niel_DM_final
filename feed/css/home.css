@@ -32,7 +32,7 @@ a {
       /*border-bottom: solid 2px #bfd9d9;*/
 }
 img{
-    width: 20vw;
+    width: 15vw;
 }
 img:hover{
     filter: invert(100%);
