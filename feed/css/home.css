@@ -121,8 +121,8 @@ body {
 .col-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 7px;
+  padding-left: 7px;
   padding-top: 7px;
   padding-bottom: 7px;
 }
